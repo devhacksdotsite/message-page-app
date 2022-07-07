@@ -2,6 +2,10 @@
 
 This is a message center code snippet from a bigger project. The app uses ReactJS and Tailwind CSS. 
 
+# View the app
+
+https://soft-licorice-2b64bc.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
