@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ramaraja&display=swap');
+
+
+@font-face {
+  font-family: 'Rector';
+  font-display: swap;
+  /* src: url('/public/assets/fonts/rector-webfont.woff2') format('woff2'),
+       url('/public/assets/fonts/rector-webfont.woff') format('woff'); */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+:root {
+
+  /* UI Colors */
+  --ui-blue-light: #E1EDF5;
+  --ui-blue: #0076b9;                 /* ADA small text complaint on white or site background, changed from mocks original #007bc1 */
+  --ui-blue-dark: #00466E;
+  --ui-blue-shadow: rgba(0,123,193,.8); /* not using */
+
+  --ui-gray-lightest: #F9FAFB;        /*  */
+  --ui-gray-light: #efefef;
+  --ui-gray-medium-light: #d1d1d1;
+  --ui-gray-medium: #949494;          /* Lightest ADA complaint gray for graphical elements on white background */
+  --ui-gray-medium-dark: #757575;     /* Lightest ADA complaint gray for small text on white background */
+  --ui-gray-default: #707070;         /* Lightest ADA complaint gray for small text on white background or site background */  
+  --ui-gray-dark: #464646;
+  --ui-gray-black: #222222;
+
+
+  --ui-green-light: #E9F4ED;
+  --ui-green: #288049;          /* ADA complaint for small text on white or site background */
+  --ui-green-dark: #095F28;     /* ADA complaint for small text on white or site background */
+
+  --ui-red-light: #F9EAEA;
+  --ui-red: #C53030;            /* ADA complaint for small text on white or site background */  
+  --ui-red-dark: #742A2A;       /* ADA complaint for small text on white or site background */    
+
+  --ui-yellow-light: #FAF2E9;
+  --ui-yellow: #CC8129;         /* ADA complaint for graphical elements on white background */  
+  --ui-yellow-dark: #975A16;    /* ADA complaint for small text on white or site background */  
+
+
+
+
+
+  /* Theme Brand Font */
+  --theme-font-body: 'Open Sans', Arial, Helvetica, sans-serif;
+  --theme-font-header: 'Rector', serif; 
+  --theme-font-brand: 'Rector', serif; 
+
+  /* Theme Brand Colors */
+  --theme-color-primary: #19285f;     /*  Midnight Blue */
+  --theme-color-secondary: #3979B9;   /*  Lake Blue */
+  --theme-color-tertiary: #bcdfe8;    /*  Sky Blue */
+
+
+  --theme-color-text-header: var(--ui-gray-dark);   /* Font color for H1 and H2 tags */
+  --theme-color-text-primary: var(--ui-gray-dark);  /* Body or portal default text color */
+  --theme-color-text-secondary: #767676;            /* Use only on white background */
+  --theme-color-text-tertiary: #000000;             /*  */
+
+  --theme-color-action: var(--ui-blue);
+  --theme-color-action-hover: var(--theme-color-primary);
+
+  --theme-color-hyperlink: var(--ui-blue);                 /* Content Area Hyperlinks */
+  --theme-color-hyperlink-hover: var(--ui-green);
+  --theme-bgcolor-hyperlink-hover: var(--ui-gray-light);
+  --theme-bgcolor-hyperlink-visited: var(--ui-blue-dark);
+
+
+  --theme-bgcolor-content: #f3f6f9;         /* background color of portal  */
+  --theme-bgcolor-cards: #ffffff;         /* background color of portal  */
+  --theme-color-rule-light: #EFEFEF;
+  --theme-color-rule-medium: #D1D1D1;
+
+
+
+
+  /* Theme Header's Utility Bar Colors */
+  --theme-color-portal-title: var(--theme-color-primary);
+  --theme-bgcolor-utility: #ffffff;                        /* background color behind logo and utility icons */
+  --theme-color-utility-border-bottom: transparent;        /* For all white headers theme border between utilitybar and navbar  */   
+
+  --theme-color-utility-icons: var(--ui-blue);
+  --theme-bgcolor-utility-icons: transparent;
+  --theme-color-utility-icons-hover: #ffffff;
+  --theme-bgcolor-utility-icons-hover: var(--ui-blue);
+
+  --theme-bgcolor-utility-mobile: var(--theme-color-primary);
+  --theme-color-utility-icons-mobile: #ffffff;
+  --theme-bgcolor-utility-icons-mobile: transparent;
+  --theme-color-utility-icons-hover-mobile:var(--theme-color-primary);
+  --theme-bgcolor-utility-icons-hover-mobile: #ffffff;   
+
+
+  /* Theme Header's Main Menu Colors */
+  /* may need to change the two SVGs (icon-checkmark-blue.svg and icon-checkmark-white.svg) to match any menu color changes */
+  --theme-bgcolor-navbar: var(--theme-color-primary); 
+  --theme-color-navbar-text: #C7D5E9;   
+  --theme-bgcolor-navbar-hover: #ffffff;
+  --theme-color-navbar-hover-text: var(--ui-gray-dark);   
+  --theme-color-navbar-current-text: #ffffff;
+  --theme-bgcolor-navbar-current: var(--ui-blue);   
+  --theme-color-navbar-current-mobile: var(--ui-gray-dark);
+  --theme-bgcolor-navbar-current-mobile: var(--theme-color-content-background); /* bgcolor also used for mobile menu hover background */
+
+
+  /* footer theme colors */   
+  --theme-bgcolor-footer: var(--theme-color-primary);
+  --theme-color-footer-rule: rgba(255,255,255,0.2);
+  --theme-color-footer-text: #ffffff;
+  --theme-color-footer-link: #ffffff;
+  --theme-color-footer-link-hover: #ffffff;
+
+
+
+
+
+
+   --color-primary: #19285f;
+   --color-primary-25: #f9fafb;
+   --color-primary-50: #e8eaef;
+   --color-primary-100: #b8bccd;
+   --color-primary-200: #959cb5;
+   --color-primary-300: #656f94;
+   --color-primary-400: #47537f;
+   --color-primary-500: #19285f; /*  primary-default  */
+   --color-primary-600: #172456;
+   --color-primary-700: #121c43;
+   --color-primary-800: #0e1634;
+   --color-primary-900: #0b1128;
+
+
+   --color-secondary: #f3f6f9;
+   --color-secondary-25: #f8fafc;
+   --color-secondary-50: #edf2f8;
+   --color-secondary-100: #c7d5e9;
+   --color-secondary-200: #acc1df;
+   --color-secondary-300: #86a5d0;
+   --color-secondary-400: #6f94c7;
+   --color-secondary-500: #4b79b9;
+   --color-secondary-600: #446ea8;
+   --color-secondary-700: #355683;
+   --color-secondary-800: #294366;
+   --color-secondary-900: #20334e;
+
+  
+
+
+
+}
+
+
+
+.ui-logo-header {
+   height: 30px;
+   width: 150px;
+}
+
+
+@media (min-width: 1024px) {
+   .ui-logo-header {
+      height: 32px;
+      width: 160px;
+   }
+ }
+
+
+
+
+#LogoHeader,
+#LogoFooter {
+   display: inline-block;
+}
+
+#lumicoLogoHeader,
+#lumicoLogoFooter {
+   display: none;
+}

@@ -1,0 +1,12 @@
+.ui-btn-messages {
+    /* @apply flex group p-2 text-ui-gray bg-white rounded-t-lg no-underline hover:no-underline hover:bg-ui-blue-light border-b border-ui-gray-light; */
+  }
+  
+  .ui-message-current {
+    @apply pointer-events-none;
+    box-shadow: 0px 0px 0px 1.5px var(--ui-blue) inset;
+  }
+  .ui-message-current svg {
+    @apply text-ui-blue-dark;
+  }
+  

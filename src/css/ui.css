@@ -1,0 +1,610 @@
+.ui-skip-to-content {
+    @apply absolute rounded-b block shadow text-white bg-theme-secondary mx-auto px-2 py-1;
+    transform: translateY(-200%);
+    left: 5%;
+  }
+  .ui-skip-to-content:hover {
+    @apply visible text-white underline bg-theme-primary;
+  }
+  .ui-skip-to-content:focus {
+    @apply visible outline-none ring-1 ring-offset-1 ring-opacity-80 w-auto mx-auto;
+    z-index: 99999;
+    transform: translateY(0%);
+    transition: transform 0.3s;
+  }
+  
+  [class^="ui-icon"],
+  [class*="ui-icon"] {
+    flex: none;
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    stroke-width: 0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: currentColor;
+  }
+  
+  :focus {
+    @apply outline-offset-2;
+  }
+  
+  .container {
+    @apply max-w-site mx-auto px-4 md:px-6 xl:px-12;
+    max-width: 1280px !important;
+  }
+  
+  @media screen(lg) {
+    .lg\:container {
+      @apply max-w-site mx-auto px-4 md:px-6 xl:px-12;
+      max-width: 1280px !important;
+    }
+  }
+  
+  .ui-no-events {
+    pointer-events: none;
+  }
+  
+  .ui-link-icon {
+    @apply inline-flex items-center;
+  }
+  .ui-link-icon svg {
+    @apply mr-2;
+  }
+  
+  .ui-btn-icon {
+    color: var(--theme-color-utility-icons);
+    background-color: var(--theme-bgcolor-utility-icons);
+  }
+  .ui-btn-icon:hover {
+    color: var(--theme-color-utility-icons-hover);
+    background-color: var(--theme-bgcolor-utility-icons-hover);
+  }
+  
+  /* Style button the same as hyperlink */
+  .ui-btn-hyperlink {
+    @apply underline text-theme-action;
+  }
+  
+  .ui-btn-hyperlink:hover,
+  .ui-btn-hyperlink:active,
+  .ui-btn-hyperlink:visited {
+    @apply no-underline text-theme-action-hover;
+    background-color: var(--theme-bgcolor-hyperlink-hover);
+  }
+  
+  /* Style button the same as tabs - payment landing */
+  .ui-btn-tab {
+    @apply text-theme-action mx-1 pt-2 mb-2 text-xs font-semibold sm:text-sm md:text-base md:pt-4 md:mx-2 lg:text-lg
+    hover:text-theme-action-hover hover:underline;
+  }
+  .ui-btn-tab-current {
+    @apply text-ui-gray-black border-b-2 border-theme-action touch-none pointer-events-none;
+  }
+  
+  a.ui-btn-primary,
+  a.ui-btn-secondary,
+  .ui-btn-primary,
+  .ui-btn-secondary,
+  .ui-btn-primary-sm,
+  .ui-btn-secondary-sm,
+  .ui-btn-primary-error,
+  .ui-btn-secondary-error,
+  .ui-btn-primary-error-sm,
+  .ui-btn-secondary-error-sm {
+    @apply inline-block border px-4 py-1 rounded text-xs no-underline hover:underline;
+  }
+  
+  a.ui-btn-primary,
+  button.ui-btn-primary,
+  .ui-btn-primary,
+  .ui-btn-primary-sm,
+  .ui-btn-primary-error,
+  .ui-btn-primary-error-sm {
+    @apply bg-theme-action border-theme-action text-white
+    hover:bg-theme-action-hover hover:border-theme-action-hover hover:text-white
+    visited:bg-theme-action visited:bg-theme-action visited:text-white
+    active:bg-theme-action active:bg-theme-action active:text-white;
+  }
+  a.ui-btn-secondary,
+  .ui-btn-secondary,
+  .ui-btn-secondary-sm,
+  .ui-btn-secondary-error,
+  .ui-btn-secondary-error-sm {
+    @apply border text-theme-action-hover border-theme-action-hover active:border-theme-action-hover visited:border-theme-action-hover;
+  }
+  
+  .ui-btn-primary-sm,
+  .ui-btn-secondary-sm,
+  .ui-btn-primary-error-sm,
+  .ui-btn-secondary-error-sm {
+    @apply text-xxs px-3 leading-tight;
+  }
+  
+  .ui-btn-primary-error,
+  .ui-btn-primary-error-sm {
+    @apply bg-ui-red border-ui-red text-white hover:bg-ui-red hover:border-ui-red hover:underline;
+  }
+  
+  .ui-btn-secondary-error,
+  .ui-btn-secondary-error-sm {
+    @apply border-ui-red-dark;
+  }
+  a.ui-btn-secondary:hover,
+  .ui-btn-secondary:hover,
+  .ui-btn-secondary-sm:hover {
+    @apply bg-transparent text-theme-action-hover border-theme-action-hover;
+    box-shadow: 0px 0px 0px 1.5px var(--theme-color-action-hover) inset;
+  }
+  
+  .ui-btn-secondary-error:hover,
+  .ui-btn-secondary-error-sm:hover {
+    box-shadow: 0px 0px 0px 1.5px var(--ui-red) inset;
+  }
+  
+  button:disabled {
+    @apply font-normal bg-transparent border border-ui-gray-medium text-ui-gray-medium hover:bg-transparent
+    hover:border-ui-gray-medium hover:text-ui-gray-medium hover:no-underline hover:font-normal hover:shadow-none !important;
+  }
+  
+  .ui-btn-bar {
+    @apply grid gap-2 place-content-center md:place-content-end  mt-4;
+    grid-template-columns: repeat(auto-fit, 10rem);
+  }
+  
+  button + button {
+    @apply ml-2;
+  }
+  
+  .ui-card-btn-more {
+    @apply block w-full p-2 text-xs text-ui-gray-dark bg-ui-gray-lightest border-t border-ui-gray-medium-light rounded-b-lg
+    hover:text-white hover:border-ui-blue hover:bg-ui-blue;
+  }
+  
+  /*  set min width for small buttons  */
+  .ui-btn-min-w {
+    @apply w-auto sm:min-w-20 md:min-w-30 lg:min-w-35;
+  }
+  
+  .ui-card {
+    @apply bg-white rounded-lg shadow-card;
+    background-color: var(--theme-bgcolor-cards);
+  }
+  
+  .ui-card-bar {
+    @apply bg-white border border-ui-gray-medium-light;
+    background-color: var(--theme-bgcolor-cards);
+  }
+  /* Card grid used in cards displaying list of links with a button at bottom of card (ex: Services & Claims Overview) */
+  .ui-card-link-grid-w-btn {
+    @apply grid gap-4 text-center p-4 lg:gap-6 lg:p-6;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr min-content;
+  }
+  /* Card grid used in cards displaying list of links with a button at bottom of card (ex: Claims) */
+  .ui-card-link-grid {
+    @apply grid grid-cols-1 auto-rows-min gap-4 p-4 lg:gap-6 lg:p-6;
+  }
+  
+  .ui-component-spacing {
+    @apply mb-10 lg:mb-12;
+  }
+  
+  /* Toggle expand and collapse icons */
+  /* User in policies details cards */
+  [aria-expanded="true"] .ui-plus {
+    display: none;
+  }
+  [aria-expanded="false"] .ui-plus {
+    display: block;
+  }
+  [aria-expanded="true"] .ui-minus {
+    display: block;
+  }
+  [aria-expanded="false"] .ui-minus {
+    display: none;
+  }
+  
+  .ui-grid-carousel {
+    grid-template-columns: min-content 1fr;
+  }
+  
+  /* Paging buttons */
+  .ui-btn-paging,
+  .ui-btn-paging-current {
+    @apply h-8 w-8 flex justify-center items-center text-xs font-bold rounded-sm text-ui-gray-dark border border-ui-gray-medium-dark bg-ui-gray-light ml-2
+    hover:border-ui-blue hover:bg-ui-blue hover:text-white hover:shadow-drop;
+  }
+  .ui-btn-paging-arrow {
+    @apply bg-white;
+  }
+  .ui-btn-paging-current {
+    @apply text-ui-gray-dark bg-white cursor-default
+    hover:border-ui-gray hover:bg-white hover:text-ui-gray-dark hover:shadow-none
+    focus:border-ui-gray focus:bg-white focus:text-ui-gray-dark focus:shadow-none;
+  }
+  
+  /* Arrow icon use at end of row to go to details */
+  .ui-btn-arrow {
+    @apply w-9 h-9 flex justify-center items-center rounded-full bg-transparent border border-transparent
+    hover:bg-ui-blue hover:text-white hover:border-ui-blue;
+  }
+  
+  /* Toggle buttons for card and table layouts */
+  .ui-btn-layout,
+  .ui-btn-layout-current {
+    @apply flex justify-center items-center h-8 w-8 m-0 text-ui-gray-dark border border-ui-gray-light bg-ui-gray-light
+    hover:text-white hover:border-ui-blue hover:bg-ui-blue;
+  }
+  .ui-btn-layout-current {
+    @apply text-ui-gray-dark border-ui-gray bg-white cursor-default
+    hover:text-ui-gray-dark hover:border-ui-gray hover:bg-white
+    focus:text-ui-gray-dark focus:border-ui-gray focus:bg-white;
+  }
+  
+  /*  Add margins to download document components  */
+  .ui-download-document {
+    @apply grid gap-4;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 160px));
+  }
+  
+  /* My Policies card and table layout */
+  .ui-policy-grid {
+    @apply bg-white rounded-lg shadow-card
+    md:bg-transparent md:rounded-none md:shadow-none;
+  }
+  .ui-policy-grid .ui-grid-item {
+    @apply relative overflow-hidden p-4 bg-white border-b border-ui-gray-medium-light pr-14
+    lg:p-6;
+  }
+  .ui-policy-grid .ui-grid-layout {
+    @apply grid grid-cols-2 gap-2 lg:gap-4;
+  }
+  .ui-btn-card-arrow,
+  .ui-btn-arrow-details,
+  .ui-policy-grid .ui-btn-arrow-details {
+    @apply absolute flex items-center right-0 top-0 bottom-0 w-10 bg-ui-gray-lightest border border-ui-gray-medium-light
+    hover:bg-ui-blue hover:text-white hover:border-ui-blue;
+  }
+  .ui-btn-card-arrow {
+    @apply rounded-r-lg;
+  }
+  .ui-policy-grid .ui-grid-table {
+    @apply md:overflow-hidden md:rounded-lg;
+  }
+  .ui-policy-grid .ui-grid-table .ui-grid-item {
+    @apply overflow-hidden
+    md:pr-14 md:mb-4 md:bg-white md:border md:border-ui-gray-light;
+  }
+  .ui-policy-grid .ui-grid-table .ui-grid-item:last-child {
+    @apply mb-0;
+  }
+  
+  @media screen(lg) {
+    .ui-policy-grid .ui-grid-table .ui-grid-layout {
+      @apply grid-cols-6 gap-4;
+      grid-template-columns: 30% 12% 12% 12% 12% auto;
+    }
+  }
+  
+  .ui-policy-grid .ui-grid-cards {
+    @apply grid grid-cols-1
+    md:grid-cols-2 lg:grid-cols-3 md:gap-4;
+  }
+  .ui-policy-grid .ui-grid-cards .ui-grid-item {
+    @apply md:rounded-lg md:shadow-card;
+  }
+  
+  @media screen(md) {
+    .ui-btn-arrow-details,
+    .ui-policy-grid .ui-grid-cards .ui-btn-arrow-details {
+      @apply absolute w-9 h-9 flex justify-center items-center rounded-full bg-transparent border border-transparent
+      hover:bg-ui-blue hover:text-white hover:border-ui-blue;
+      right: 1rem;
+      top: 1.5rem;
+    }
+  }
+  
+  .ui-policy-grid .ui-policy-col-01,
+  .ui-policy-grid .ui-policy-col-06 {
+    @apply col-span-2;
+  }
+  .ui-policy-grid .ui-grid-name {
+    @apply flex flex-row-reverse justify-end
+    md:block;
+  }
+  .ui-policy-grid .ui-grid-name .ui-badge-good,
+  .ui-policy-grid .ui-grid-name .ui-badge-risk,
+  .ui-policy-grid .ui-grid-name .ui-badge-problem {
+    @apply inline-flex flex-shrink p-0 bg-transparent border-transparent
+    md:p-1 md:pr-2 md:mt-1;
+  }
+  .ui-policy-grid .ui-grid-name .ui-badge-good {
+    @apply md:border-ui-green md:bg-ui-green-light !important;
+  }
+  .ui-policy-grid .ui-grid-name .ui-badge-risk {
+    @apply md:border-ui-yellow md:bg-ui-yellow-light;
+  }
+  .ui-policy-grid .ui-grid-name .ui-badge-problem {
+    @apply md:border-ui-red md:bg-ui-red-light;
+  }
+  .ui-policy-grid .ui-grid-table .ui-policy-col-01,
+  .ui-policy-grid .ui-grid-table .ui-policy-col-06 {
+    @apply lg:col-span-1;
+  }
+  .ui-policy-grid .ui-policy-col-02 {
+    @apply hidden md:block;
+  }
+  .ui-policy-grid .ui-policy-col-04 {
+    @apply hidden md:block;
+  }
+  .ui-policy-grid .ui-grid-cards .ui-policy-col-06 {
+    @apply col-span-2;
+  }
+  .ui-policy-grid .ui-policy-col-06 .ui-badge-icon {
+    @apply hidden lg:mb-2 lg:inline-flex;
+  }
+  .ui-policy-grid .ui-policy-col-01 .ui-badge-icon .ui-badge-text {
+    @apply hidden md:block;
+  }
+  .ui-policy-grid .ui-grid-table .ui-policy-col-01 .ui-badge-icon {
+    @apply inline-flex lg:hidden;
+  }
+  .ui-policy-grid .ui-grid-cards .ui-policy-col-06 .ui-badge-icon {
+    @apply hidden;
+  }
+  
+  /* Policy cards on payment landing screen */
+  .ui-payment-policy-card {
+    @apply grid grid-cols-1 md:gap-x-4 lg:gap-0;
+  }
+  @media screen(md) {
+    .ui-payment-policy-card {
+      grid-template-columns: 1fr 1fr;
+    }
+    .ui-payment-policy-card-min {
+      grid-template-columns: 1fr min-content;
+    }
+  }
+  .ui-payment-policy-details-grid {
+    @apply grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4;
+  }
+  .ui-payment-policy-statements,
+  .ui-payment-policy-actions {
+    @apply lg:border-t border-ui-gray-medium-light;
+  }
+  .ui-payment-policy-card-min .ui-gridcell-hide {
+  }
+  .ui-payment-policy-card-min .ui-payment-policy-details-grid > div {
+    @apply hidden;
+  }
+  .ui-payment-policy-card-min .ui-payment-policy-details-grid > div:first-child {
+    @apply block;
+  }
+  .ui-payment-policy-card-min .ui-payment-policy-details-grid > div:nth-child(2) {
+    @apply block;
+  }
+  @media screen(lg) {
+    .ui-payment-policy-card-min
+      .ui-payment-policy-details-grid
+      > div:nth-child(3) {
+      @apply block;
+    }
+  }
+  .ui-payment-policy-card-min .ui-payment-policy-details-grid > div:nth-child(2) {
+    @apply block;
+  }
+  .ui-payment-policy-card-min .ui-payment-policy-statements,
+  .ui-payment-policy-card-min .ui-payment-policy-actions {
+    @apply lg:border-t-0;
+  }
+  .ui-payment-policy-card-min .ui-payment-policy-details-grid {
+    @apply grid grid-cols-2 md:grid-cols-3 gap-4 mt-4;
+  }
+  .ui-payment-policy-card-min .ui-payment-policy-tables,
+  .ui-payment-policy-card-min .ui-payment-policy-statements {
+    @apply hidden;
+  }
+  .ui-payment-policy-card-min .ui-payment-policy-details {
+    @apply h-24;
+  }
+  
+  /*  */
+  .ui-claim-process-start,
+  .ui-claim-process-middle,
+  .ui-claim-process-last {
+    @apply relative flex flex-row-reverse items-center text-right;
+  }
+  .ui-claim-process-step {
+    @apply relative w-16 h-16 my-4 rounded-full flex flex-col items-center justify-center;
+    z-index: 10;
+  }
+  .ui-claim-process-start::before,
+  .ui-claim-process-middle::before,
+  .ui-claim-process-last::before {
+    @apply absolute block bg-theme-action;
+    content: "";
+    top: calc(50% + 2rem);
+    height: 100%;
+    width: 2px;
+    left: auto;
+    right: 1.95rem;
+    z-index: 2;
+  }
+  .ui-claim-process-middle::before {
+    top: 0;
+    bottom: 0;
+  }
+  .ui-claim-process-last::before {
+    top: 0;
+    height: 50%;
+  }
+  .ui-claim-process-step-current::after {
+    @apply absolute;
+    content: " ";
+    /* background: transparent url("/public/assets/img/icon_previous-arrow-blue.svg") 
+      no-repeat;*/
+    top: 1.88rem;
+    right: -0.3rem;
+    width: 6px;
+    height: 10px;
+    z-index: 120;
+  }
+  
+  @media screen(md) {
+    .ui-claim-process-start,
+    .ui-claim-process-middle,
+    .ui-claim-process-last {
+      @apply relative px-4 flex flex-col items-center text-center;
+    }
+    .ui-claim-process-step {
+      @apply my-0;
+      z-index: 10;
+    }
+    .ui-claim-process-start::before,
+    .ui-claim-process-middle::before,
+    .ui-claim-process-last::before {
+      content: "";
+      top: 2rem;
+      height: 2px;
+      width: 100%;
+      left: calc(50% + 2rem);
+      right: 0;
+      z-index: 2;
+    }
+    .ui-claim-process-middle::before {
+      left: 0;
+      right: 0;
+    }
+    .ui-claim-process-last::before {
+      left: 0;
+      width: 50%;
+    }
+    .ui-claim-process-step-current::after {
+      transform: rotate(-90deg);
+      top: -0.2rem;
+      right: auto;
+    }
+  }
+  
+  /* claim status - card/table toggle layout - required documents */
+  .ui-documents-grid .ui-grid-cards,
+  .ui-documents-grid .ui-grid-table {
+    @apply grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6;
+  }
+  .ui-documents-grid .ui-grid-cards .ui-card-grid-layout,
+  .ui-documents-grid .ui-grid-table .ui-card-grid-layout {
+    @apply grid gap-4 p-4;
+    grid-template-columns: 1fr max-content;
+  }
+  .ui-documents-grid .ui-grid-cards .ui-document-grid-title,
+  .ui-documents-grid .ui-grid-table .ui-document-grid-title {
+    @apply border-b border-theme-rule-medium;
+  }
+  .ui-documents-grid .ui-grid-cards .ui-document-grid-badge,
+  .ui-documents-grid .ui-grid-table .ui-document-grid-badge {
+    @apply border-b border-theme-rule-medium;
+  }
+  .ui-documents-grid .ui-grid-cards .ui-document-grid-desc,
+  .ui-documents-grid .ui-grid-table .ui-document-grid-desc {
+    @apply col-span-2;
+  }
+  .ui-documents-grid .ui-grid-cards .ui-document-grid-actions,
+  .ui-documents-grid .ui-grid-table .ui-document-grid-actions {
+    @apply col-span-2;
+  }
+  
+  @media screen(md) {
+    .ui-documents-grid .ui-grid-table {
+      @apply grid grid-cols-1 gap-4;
+    }
+    .ui-documents-grid .ui-grid-table .ui-card {
+      @apply rounded-none shadow-none p-4;
+    }
+    .ui-documents-grid .ui-grid-table .ui-card-grid-layout {
+      @apply grid gap-0 p-0 content-center auto-rows-min;
+      grid-template-columns: min-content 1fr max-content;
+      grid-template-rows: min-content 1fr;
+    }
+    .ui-documents-grid .ui-grid-table .ui-document-grid-title {
+      @apply border-0 p-0;
+    }
+    .ui-documents-grid .ui-grid-table .ui-document-grid-badge {
+      @apply order-first row-span-2 border-0 p-0;
+    }
+    .ui-documents-grid .ui-grid-table .ui-document-grid-desc {
+      @apply order-last col-auto border-0 p-0;
+    }
+    .ui-documents-grid .ui-grid-table .ui-document-grid-actions {
+      @apply order-3 p-0 border-0 row-span-2 col-auto place-self-end;
+    }
+    .ui-documents-grid .ui-grid-table .ui-badge-icon {
+      @apply bg-transparent border-transparent !important;
+    }
+    .ui-documents-grid .ui-grid-table .ui-badge-icon .ui-badge-text {
+      @apply hidden;
+    }
+  }
+  
+  /* manage payment methods - card/table layout toggle - payment type */
+  .ui-paymethod-grid .ui-grid-cards,
+  .ui-paymethod-grid .ui-grid-table {
+    @apply grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 lg:gap-6;
+  }
+  .ui-paymethod-grid .ui-grid-cards .ui-card-grid-layout,
+  .ui-paymethod-grid .ui-grid-table .ui-card-grid-layout {
+    @apply grid grid-cols-2 gap-4 md:gap-6 h-full;
+  }
+  .ui-paymethod-grid .ui-grid-cards .ui-paymethod-grid-actions,
+  .ui-paymethod-grid .ui-grid-table .ui-paymethod-grid-actions {
+    @apply col-span-2;
+  }
+  .ui-paymethod-grid .ui-grid-cards .ui-btn-primary,
+  .ui-paymethod-grid .ui-grid-table .ui-btn-secondary {
+    @apply ui-btn-min-w;
+  }
+  .ui-paymethod-grid .ui-grid-cards .ui-paymethod-grid-divider,
+  .ui-paymethod-grid .ui-grid-table .ui-paymethod-grid-divider {
+    @apply hidden;
+  }
+  
+  @media screen(md) {
+    .ui-paymethod-grid .ui-grid-table {
+      @apply grid grid-cols-1 gap-4;
+    }
+    .ui-paymethod-grid .ui-grid-table .ui-card {
+      @apply rounded-none shadow-none;
+    }
+    .ui-paymethod-grid .ui-grid-table .ui-card-grid-layout {
+      @apply grid gap-x-4 gap-y-2 content-center auto-rows-min;
+      grid-template-columns: 1fr 1fr 1fr 1fr max-content;
+    }
+    .ui-paymethod-grid .ui-grid-table .ui-paymethod-grid-title {
+      @apply col-span-3;
+    }
+    .ui-paymethod-grid .ui-grid-table .ui-paymethod-grid-badge {
+      @apply col-span-2;
+    }
+    .ui-paymethod-grid .ui-grid-table .ui-paymethod-grid-actions {
+      @apply col-auto;
+    }
+    .ui-paymethod-grid .ui-grid-table .ui-paymethod-grid-divider {
+      @apply inline-block;
+    }
+    .ui-paymethod-grid .ui-grid-table .ui-btn-primary,
+    .ui-paymethod-grid .ui-grid-table .ui-btn-secondary {
+      @apply min-w-0 inline rounded-none p-0 text-theme-action bg-transparent underline border-0;
+    }
+    .ui-paymethod-grid .ui-grid-table .ui-btn-primary:hover,
+    .ui-paymethod-grid .ui-grid-table .ui-btn-secondary:hover {
+      @apply text-theme-action-hover no-underline border-0 shadow-none;
+      background-color: var(--theme-bgcolor-hyperlink-hover);
+    }
+  }
+  /* Grid for My Account Manage Notification */
+  .ui-grid-manage-notification {
+    @apply grid gap-x-2 content-center auto-rows-min;
+    grid-template-columns: 1fr min-content min-content min-content;
+  }
+  

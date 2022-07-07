@@ -1,0 +1,254 @@
+label,
+legend {
+  @apply font-semibold text-xs;
+}
+
+label.ui-label-block {
+  @apply block mb-1;
+}
+
+select,
+input {
+  @apply relative text-sm border border-ui-gray-medium rounded bg-ui-gray-lightest text-ui-gray-dark p-2 px-4 w-full;
+}
+
+input:disabled,
+select:disabled,
+button:disabled {
+  @apply bg-transparent border-ui-gray-medium text-ui-gray-medium pointer-events-none;
+}
+select:hover,
+input:hover {
+  @apply border-ui-blue;
+  box-shadow: 0px 0px 0px 1px var(--theme-color-action);
+}
+select:hover,
+input:hover {
+  @apply border-ui-blue;
+  box-shadow: 0px 0px 0px 1px var(--theme-color-action);
+}
+select:focus,
+input:focus {
+  @apply bg-white text-black;
+}
+
+input[type="radio"] {
+  @apply appearance-none flex-none h-4 w-4 border border-theme-action rounded-full;
+  accent-color: var(--theme-color-action);
+  background-clip: content-box;
+  padding: 2px;
+}
+input[type="radio"]:checked {
+  @apply bg-theme-action;
+}
+/* use .ui-radio on <label> when radio is nested in label to underline text */
+.ui-radio {
+  @apply hover:underline;
+}
+
+input[type="checkbox"] {
+  @apply appearance-none h-4 w-4 border border-theme-action rounded-sm;
+  accent-color: var(--theme-color-action);
+  background-clip: content-box;
+  padding: 2px;
+}
+input[type="checkbox"]:checked {
+  @apply bg-theme-action;
+}
+/* use .ui-radio on <label> when radio is nested in label to underline text */
+.ui-radio {
+  @apply hover:underline;
+}
+
+.ui-input-val-true::after {
+  @apply absolute rounded-full w-4.5 h-4.5 bg-ui-green border-ui-green;
+  content: "";
+  border-width: 4px;
+  right: 1rem;
+  top: 50%;
+  margin-top: -0.5625rem;
+  background-color: var(--ui-green);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E %3Cpath fill='%23FFFFFF' d='M1.7,7.4c0,0-0.1,0-0.1,0C1.3,7.3,1.1,7.2,1,7L0.1,4.8c-0.2-0.4,0-0.8,0.4-1c0.4-0.2,0.8,0,1,0.4L2,5.4 l4.7-4.6c0.3-0.3,0.8-0.3,1.1,0C8,1.1,8,1.6,7.7,1.9L2.3,7.2C2.1,7.3,1.9,7.4,1.7,7.4z'/%3E %3C/svg%3E");
+  background-repeat: no-repeat;
+}
+
+.ui-input-val-false::after {
+  @apply absolute rounded-full w-4.5 h-4.5 bg-ui-red border-ui-red;
+  content: "";
+  border-width: 1px;
+  right: 1rem;
+  top: 50%;
+  margin-top: -0.5625rem;
+  background-color: var(--ui-red);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E %3Cg transform='translate(0 1.914)'%3E %3Cpath fill='%23FFFFFF' d='M8,7.1c-0.4,0-0.8-0.3-0.8-0.8V2.1c0-0.4,0.3-0.8,0.8-0.8s0.8,0.3,0.8,0.8v4.3C8.8,6.8,8.4,7.1,8,7.1z'/%3E %3Cpath fill='%23FFFFFF' d='M8,10.6c-0.2,0-0.4-0.1-0.5-0.2c-0.1-0.1-0.1-0.2-0.2-0.2c0-0.1-0.1-0.2-0.1-0.3c0-0.1,0-0.2,0.1-0.3 c0-0.1,0.1-0.2,0.2-0.2C7.7,9,8.2,9,8.5,9.3c0.1,0.1,0.1,0.2,0.2,0.2c0,0.1,0.1,0.2,0.1,0.3c0,0.1,0,0.2-0.1,0.3 c0,0.1-0.1,0.2-0.2,0.2C8.4,10.5,8.2,10.6,8,10.6z'/%3E %3C/g%3E %3C/svg%3E");
+  background-repeat: no-repeat;
+}
+.ui-input-val-true input,
+.ui-input-val-false input {
+  @apply pr-10;
+}
+
+.ui-input-error {
+  @apply relative text-xxs text-ui-red py-1 pl-4;
+}
+.ui-input-error::after {
+  @apply absolute rounded-full w-3 h-3;
+  content: "";
+  top: 50%;
+  margin-top: -6px;
+  left: 0px;
+  background: var(--ui-red)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E %3Cg transform='translate(0 1.914)'%3E %3Cpath fill='%23FFFFFF' d='M8,7.1c-0.4,0-0.8-0.3-0.8-0.8V2.1c0-0.4,0.3-0.8,0.8-0.8s0.8,0.3,0.8,0.8v4.3C8.8,6.8,8.4,7.1,8,7.1z'/%3E %3Cpath fill='%23FFFFFF' d='M8,10.6c-0.2,0-0.4-0.1-0.5-0.2c-0.1-0.1-0.1-0.2-0.2-0.2c0-0.1-0.1-0.2-0.1-0.3c0-0.1,0-0.2,0.1-0.3 c0-0.1,0.1-0.2,0.2-0.2C7.7,9,8.2,9,8.5,9.3c0.1,0.1,0.1,0.2,0.2,0.2c0,0.1,0.1,0.2,0.1,0.3c0,0.1,0,0.2-0.1,0.3 c0,0.1-0.1,0.2-0.2,0.2C8.4,10.5,8.2,10.6,8,10.6z'/%3E %3C/g%3E %3C/svg%3E")
+    no-repeat;
+}
+
+.ui-checkbox {
+  @apply relative flex items-center text-sm font-normal mb-1 hover:underline;
+}
+
+.ui-checkbox input {
+  @apply w-auto absolute;
+  opacity: 0.01;
+}
+.ui-checkbox .ui-checkmark {
+  @apply flex justify-center items-center w-3.5 h-3.5 border border-ui-blue rounded bg-white mr-2;
+}
+.ui-checkbox:hover .ui-checkmark {
+  @apply underline;
+  box-shadow: 0px 0px 0px 1px var(--theme-color-action);
+}
+
+.ui-checkbox input:checked ~ .ui-checkmark svg {
+  @apply hidden;
+}
+.ui-checkbox input:checked ~ .ui-checkmark {
+  @apply bg-ui-blue;
+}
+
+.ui-checkbox input:checked ~ .ui-checkmark svg {
+  @apply block;
+}
+
+.ui-checkbox input:focus ~ .ui-checkmark {
+  /* @apply focus:outline-none focus-visible:ring; */
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1),
+    0px 0px 0px 2.5px rgba(0, 0, 0, 1);
+}
+
+.ui-input-search {
+  @apply relative;
+}
+.ui-input-search::before {
+  @apply absolute w-3 h-3;
+  content: "";
+  top: 50%;
+  margin-top: -6px;
+  z-index: 90;
+  left: 8px;
+  /*background: transparent url("/public/assets/img/icon-search-blue.svg")
+    no-repeat;*/
+}
+
+.ui-form-make-payment .ui-form-card-row {
+  @apply flex flex-col md:flex-row flex-wrap;
+}
+.ui-form-make-payment .ui-form-card {
+  @apply relative flex-1 flex-grow m-2 p-2 bg-ui-gray-lightest rounded border border-ui-gray-medium cursor-pointer overflow-hidden min-w-fit;
+  /* min-width: 200px; */
+}
+
+.ui-form-make-payment .ui-form-card select,
+.ui-form-make-payment .ui-form-card input {
+  @apply bg-white;
+}
+
+.ui-form-make-payment .ui-form-card:hover {
+  @apply border-ui-blue;
+  box-shadow: 0px 0px 0px 1px var(--theme-color-action);
+}
+.ui-form-make-payment .ui-form-card:focus {
+  @apply outline-offset-4;
+}
+.ui-form-make-payment .ui-form-card .ui-form-card-radio-hide {
+  @apply absolute top-2 right-2 w-px h-px opacity-0;
+  top: -1000px;
+}
+.ui-form-make-payment .ui-form-card .ui-form-card-checkbox,
+.ui-form-make-payment .ui-form-card .ui-form-card-icon {
+  @apply absolute flex justify-center items-center top-2 right-2 w-3.5 h-3.5 border border-ui-blue rounded bg-white;
+}
+
+.ui-form-make-payment .ui-form-card .ui-form-card-icon {
+  @apply rounded-full w-5 h-5;
+}
+.ui-form-make-payment .ui-form-card:hover .ui-form-card-icon {
+  @apply bg-ui-blue;
+}
+.ui-form-make-payment button.ui-form-card {
+  @apply flex-grow-0 justify-start items-stretch basis-1/6;
+}
+.ui-form-make-payment button.ui-form-card .ui-link {
+  @apply flex self-start underline text-left pr-4;
+  color: var(--theme-color-hyperlink) !important;
+}
+.ui-form-make-payment button.ui-form-card:hover .ui-link {
+  @apply no-underline;
+  color: var(--theme-color-hyperlink-hover) !important;
+  /* background-color: var(--theme-bgcolor-hyperlink-hover); */
+}
+.ui-form-make-payment button.ui-form-card svg {
+  @apply text-ui-blue;
+}
+.ui-form-make-payment button.ui-form-card:hover svg {
+  @apply text-white;
+}
+
+.ui-form-make-payment .ui-form-card.selected,
+.ui-form-make-payment .ui-form-card.selected:hover {
+  @apply border-ui-blue;
+  box-shadow: 0px 0px 0px 2px var(--theme-color-action),
+    3px 3px 4px 0 rgba(0, 0, 0, 0.16), 0px 0px 0px 3px rgba(0, 0, 0, 0.06);
+}
+.ui-form-make-payment .ui-form-card.selected .ui-form-card-checkbox,
+.ui-form-make-payment .ui-form-card.selected:hover .ui-form-card-checkbox {
+  @apply bg-ui-blue;
+}
+.ui-form-make-payment .ui-form-card.selected .ui-form-card-checkbox svg,
+.ui-form-make-payment .ui-form-card.selected:hover .ui-form-card-checkbox svg {
+  @apply block;
+}
+
+.ui-form-make-payment .ui-checkbox input:checked ~ span {
+  @apply font-semibold;
+}
+
+/*
+  Provide basic, default focus styles.
+*/
+button:focus,
+select:focus,
+a:focus,
+input:focus {
+  @apply outline-offset-2;
+}
+
+/*
+  Remove default focus styles for mouse users ONLY if
+  :focus-visible is supported on this platform.
+ */
+
+button:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+.ui-checkbox input:focus:not(:focus-visible) ~ .ui-checkmark {
+  @apply outline-offset-4 outline-red-500;
+}
+
+/*
+  Optionally: If :focus-visible is supported on this
+  platform, provide enhanced focus styles for keyboard
+  focus.
+ */
+button:focus-visible {
+}

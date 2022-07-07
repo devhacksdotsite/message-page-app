@@ -1,13 +1,63 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "./css/theme.css";
+
+@tailwind base;
+@layer base {
+  body {
+    background-color: var(--theme-bgcolor-content);
+  }
+  h1 {
+    @apply font-header text-ui-gray-dark mb-3;
+    font-size: 2.5rem; /* 40px */
+    line-height: 2.625rem; /* 42px */
+  }
+  h2 {
+    @apply font-header text-ui-gray-dark mb-2;
+    font-size: 2rem; /* 32px */
+    line-height: 2.375rem; /* 38px */
+  }
+  hr {
+    @apply my-4 lg:my-6 border-t border-theme-rule-medium;
+  }
+  select,
+  input {
+    @apply relative text-sm p-2 px-4;
+  }
+
+
+  main a {
+    @apply underline hover:no-underline;
+    color: var(--theme-color-hyperlink);
+  }
+
+  main a:hover {
+    color: var(--theme-color-hyperlink-hover);
+    background-color: var(--theme-bgcolor-hyperlink-hover);
+  }
+
+  main a:active,
+  main a:visited {
+    color: var(--theme-bgcolor-hyperlink-visited);
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@tailwind components;
+@layer components {
+  @import "./css/ui.css";
+  @import "./css/messagecenter.css";
+  @import "./css/badges.css";
+  @import "./css/dialog.css";
+  @import "./css/forms.css";
+  /* @import "./css/header.css";
+  @import "./css/breadcrumbs.css";
+  @import "./css/footer.css";
+
+  @import "./css/tabs.css";
+  @import "./css/forms.css";
+  @import "./css/table.css";
+  
+  */
 }
+
+/* @import "tailwindcss/utilities"; */
+@tailwind utilities;
+

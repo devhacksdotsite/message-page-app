@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+This is a message center code snippet from a bigger project. The app uses ReactJS and Tailwind CSS. 
+
+# Getting Started with Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

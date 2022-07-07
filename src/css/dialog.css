@@ -1,0 +1,67 @@
+.ui-default-dialog {
+    @apply text-sm rounded-t-lg shadow-md bg-white border border-ui-gray-light overflow-y-auto p-6;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5000;
+  }
+  
+  @media screen(md) {
+    .ui-default-dialog {
+      @apply absolute rounded-lg;
+      left: 50vw;
+      right: auto;
+      bottom: auto;
+      transform: translateX(-50%);
+      min-width: calc(640px - (15px * 2));
+      min-height: auto;
+      box-shadow: 0 19px 38px rgb(0 0 0 / 12%), 0 15px 12px rgb(0 0 0 / 22%);
+    }
+    .ui-dialog-sm {
+      @apply max-w-md;
+    }
+  }
+  
+  .ui-default-dialog p {
+    @apply text-sm mb-4 lg:mb-6;
+  }
+  .ui-default-dialog hr {
+    @apply mt-4;
+  }
+  
+  .ui-default-dialog hr.ui-no-margins {
+    @apply m-0;
+  }
+  
+  
+  .ui-default-dialog-close {
+    @apply flex justify-center items-center absolute w-6 h-6 rounded-full text-ui-blue hover:bg-ui-blue hover:text-white;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  /* dialog::backdrop, */
+  .dialog-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(0 0 0 / 40%);
+  }
+  
+  .dialog-backdrop.active {
+    display: block;
+  }
+  
+  .no-scroll {
+    overflow-y: auto !important;
+  }
+  
+  /* this is added to the body when a dialog is open */
+  .has-dialog {
+    overflow: hidden;
+  }
+  
