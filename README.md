@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Project Description
 
 This is a message center code snippet from a bigger project. The app uses ReactJS and Tailwind CSS. 
 
